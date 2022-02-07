@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.dogs.domain.Dogs;
-
-import net.bytebuddy.asm.Advice.This;
+import com.qa.dogs.service.DogsService;
 
 
 
@@ -23,9 +22,9 @@ import net.bytebuddy.asm.Advice.This;
 @RequestMapping("/dogs")
 public class DogController {
 	
-	private DogService dogService;
+	private DogsService dogService;
 	
-	public DogController(DogService dogService) {
+	public DogController(DogsService dogService) {
 		this.dogService = dogService;
 	}
 	
